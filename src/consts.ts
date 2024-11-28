@@ -6,7 +6,7 @@ export const SITE_DESCRIPTION = 'Senior Cloud Native Developer with 13+ years of
 
 export const CONTACT = {
   location: 'Paris, France',
-  email: 'punith.564@gmail.com'
+  email: 'punith.564@gmail.com',
   linkedin: 'https://www.linkedin.com/in/puneethkumarck/'
 } as const;
 
