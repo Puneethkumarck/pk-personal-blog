@@ -5,7 +5,12 @@ export const SITE_TITLE = 'PuneethKumar C K';
 export const SITE_DESCRIPTION = 'Senior Cloud Native Developer with 13+ years of experience in software design, development, and integration';
 
 export const CONTACT = {
-  location: 'Courbevoie Paris, France',
+  location: 'Paris, France',
+  email: 'punith.564@gmail.com'
+  linkedin: 'https://www.linkedin.com/in/puneethkumarck/'
+} as const;
+
+export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/in/puneethkumarck/',
   github: 'https://github.com/Puneethkumarck',
   medium: 'https://medium.com/@punithkumarck'
