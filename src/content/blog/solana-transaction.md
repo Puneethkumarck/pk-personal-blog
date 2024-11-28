@@ -2,7 +2,7 @@
 title: 'Solana Transaction Flow: High Level E2E Flow'
 description: 'Understanding the end-to-end flow of transactions through the Solana network'
 pubDate: '2024-03-24'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/solana-transaction.jpg'
 ---
 
 A comprehensive overview of how transactions flow through the Solana network, from creation to confirmation. This article explores the key components and processes involved in Solana transactions.

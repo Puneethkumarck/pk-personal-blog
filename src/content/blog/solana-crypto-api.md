@@ -2,7 +2,7 @@
 title: 'Crafting a Solana Crypto API with Hexagonal Architecture'
 description: 'A detailed guide on building a Solana cryptocurrency API using hexagonal architecture principles'
 pubDate: '2024-03-23'
-heroImage: '/blog-placeholder-4.jpg'
+heroImage: '/solanablogcover.jpg'
 ---
 
 Learn how to build a robust Solana cryptocurrency API using hexagonal architecture principles. This article covers the implementation details and best practices for creating a maintainable and scalable blockchain application.

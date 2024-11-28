@@ -2,7 +2,7 @@
 title: 'Implementing Ethereum Transfers in Java: Key Concepts and Code'
 description: 'A comprehensive guide to implementing Ethereum transfers using Java, covering key concepts and practical implementation details'
 pubDate: '2024-03-26'
-heroImage: '/blog-placeholder-3.jpg'
+heroImage: '/ethereum-transfer.jpg'
 ---
 
 Implementing Ethereum transfers in Java requires understanding several key concepts and using the right tools. In this guide, we'll explore how to create Ethereum transactions using Java, focusing on the Web3j library and essential blockchain concepts.
