@@ -1,0 +1,36 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Bio from '../components/Bio.astro';
+import CoreCompetencies from '../components/CoreCompetencies.astro';
+import TechnicalExpertise from '../components/TechnicalExpertise.astro';
+import Experience from '../components/Experience.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Bio />
+      <CoreCompetencies />
+      <TechnicalExpertise />
+      <Experience />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    width: 960px;
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 3em 1em;
+  }
+</style>

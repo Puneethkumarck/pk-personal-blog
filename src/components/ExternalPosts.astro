@@ -1,0 +1,114 @@
+---
+interface ExternalPost {
+  title: string;
+  description: string;
+  url: string;
+  platform: 'linkedin' | 'medium';
+  date: Date;
+}
+
+const externalPosts: ExternalPost[] = [
+  {
+    title: 'Implementing Ethereum Transfers in Java: Key Concepts and Code',
+    description: 'A comprehensive guide to implementing Ethereum transfers using Java, covering key concepts and practical implementation details',
+    url: 'https://medium.com/@punithkumarck/implementing-ethereum-transfers-in-java-key-concepts-and-code-7b6b872d08ba',
+    platform: 'medium',
+    date: new Date('2024-09-30')
+  },
+  {
+    title: 'Unlocking Blockchain for Developers: Crafting a Solana Crypto API with Hexagonal Architecture',
+    description: 'Unlocking Blockchain for Developers: Crafting a Solana Crypto API with Hexagonal Architecture',
+    url: 'https://medium.com/@punithkumarck/unlocking-blockchain-for-developers-crafting-a-solana-crypto-api-with-hexagonal-architecture-57323a513e4f',
+    platform: 'medium',
+    date: new Date('2024-09-23')
+  },
+  {
+    title: 'Solana Transaction Flow: High Level E2E flow of transactions through the Solana network',
+    description: 'Solana Transaction Flow: High Level E2E flow of transactions through the Solana network',
+    url: 'https://www.linkedin.com/pulse/solana-transaction-flow-high-level-e2e-transactions-through-ck-obx8c/',
+    platform: 'LinkedIn',
+    date: new Date('2024-09-26')
+  }
+];
+
+import FormattedDate from './FormattedDate.astro';
+---
+
+<section class="external-posts">
+  <h2>External Articles</h2>
+  <ul>
+    {externalPosts.map((post) => (
+      <li>
+        <a href={post.url} target="_blank" rel="noopener noreferrer">
+          <div class="post-card">
+            <span class="platform">{post.platform}</span>
+            <h4 class="title">{post.title}</h4>
+            <p class="description">{post.description}</p>
+            <p class="date">
+              <FormattedDate date={post.date} />
+            </p>
+          </div>
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .external-posts {
+    margin: 4em 0;
+  }
+
+  h2 {
+    margin-bottom: 1.5em;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .post-card {
+    background: white;
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease;
+  }
+
+  .post-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .platform {
+    text-transform: capitalize;
+    font-size: 0.8em;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  .title {
+    margin: 0.5em 0;
+    color: rgb(var(--black));
+    font-size: 1.2em;
+  }
+
+  .description {
+    color: rgb(var(--gray));
+    font-size: 0.9em;
+    margin: 0.5em 0;
+  }
+
+  .date {
+    margin: 0.5em 0 0 0;
+    color: rgb(var(--gray));
+    font-size: 0.8em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+</style>

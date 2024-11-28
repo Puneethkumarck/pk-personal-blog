@@ -1,0 +1,139 @@
+---
+import { EXPERIENCE } from '../consts';
+---
+
+<div class="experience-container">
+  <h2>Professional Experience</h2>
+  
+  <div class="timeline">
+    {EXPERIENCE.map((job) => (
+      <div class="timeline-item">
+        <div class="timeline-info">
+          <span class="period">{job.period}</span>
+          <span class="location">{job.location}</span>
+        </div>
+        
+        <div class="timeline-content">
+          <h3>{job.role}</h3>
+          <h4>{job.company}</h4>
+          <ul>
+            {job.highlights.map(highlight => (
+              <li>{highlight}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .experience-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2em;
+    margin: 2em 0;
+    box-shadow: var(--box-shadow);
+  }
+
+  h2 {
+    color: var(--accent);
+    margin-bottom: 1.5em;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: rgb(var(--gray-light));
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+  }
+
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    left: 0;
+    margin: 2em 0;
+  }
+
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    top: 15px;
+    border-radius: 50%;
+    background: var(--accent);
+    z-index: 1;
+  }
+
+  .timeline-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .period {
+    font-weight: bold;
+    color: var(--accent);
+  }
+
+  .location {
+    color: rgb(var(--gray));
+  }
+
+  .timeline-content {
+    padding: 1em;
+    background: rgb(var(--gray-light));
+    border-radius: 8px;
+  }
+
+  h3 {
+    margin: 0;
+    color: rgb(var(--gray-dark));
+  }
+
+  h4 {
+    margin: 0.5em 0;
+    color: rgb(var(--gray));
+  }
+
+  ul {
+    list-style-type: disc;
+    margin: 1em 0;
+    padding-left: 1.5em;
+  }
+
+  li {
+    margin: 0.5em 0;
+    color: rgb(var(--gray-dark));
+  }
+
+  @media (max-width: 768px) {
+    .timeline::after {
+      left: 31px;
+    }
+
+    .timeline-item {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+
+    .timeline-item::after {
+      left: 21px;
+    }
+  }
+</style>
